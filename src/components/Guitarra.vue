@@ -1,5 +1,10 @@
 <script>
-export default {};
+  const props = defineProps({
+    guitarra: {
+      type: Object,
+      required: true,
+    }
+  })
 </script>
 <template>
 

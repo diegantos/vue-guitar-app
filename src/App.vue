@@ -1,5 +1,5 @@
 <script setup>
-  import {ref, reactive, onMounted} from 'vue'
+  import {ref, onMounted} from 'vue'
   import {db} from './data/guitarras'
   import Guitarra from './components/Guitarra.vue';
 
@@ -7,7 +7,10 @@
 
   onMounted(() => {
     guitarras.value = db
-  }),
+  })
+
+</script>
+<script>
 
 </script>
 
@@ -95,6 +98,7 @@
     <div class="row mt-5">
       <Guitarra 
         v-for="guitarra in guitarras"
+        :guitarra="guitarra"
       />
     </div>
   </main>
