@@ -1,7 +1,7 @@
 <script>
 export default {};
 </script>
-<template lang="">
+<template>
 
     <div class="col-md-6 col-lg-4 my-4 row align-items-center">
         <div class="col-4">
@@ -22,6 +22,7 @@ export default {};
             Agregar al Carrito
           </button>
         </div>
+    </div>
 
 </template>
 
