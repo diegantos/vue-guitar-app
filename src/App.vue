@@ -12,7 +12,7 @@
     guitarras.value = db
   })
 
-    const agregarCarrito = (guitarra) => {
+  const agregarCarrito = (guitarra) => {
     const existeCarrito = carrito.value.findIndex(producto => producto.id === guitarra.id)
 
     if(existeCarrito >= 0){
@@ -23,12 +23,22 @@
     }
   }
 
+  const decrementarCantidad = () => {
+    console.log('Menos...')
+  }
+
+  const incrementarCantidad = () => {
+    console.log('Mas...')
+  }
+
 </script>
 
 <template>
 
   <Header 
     :carrito = "carrito"
+    @incrementar-cantidad = "incrementarCantidad"
+    @decrementar-cantidad = "decrementarCantidad"
   />
 
   <main class="container-xl mt-5">
