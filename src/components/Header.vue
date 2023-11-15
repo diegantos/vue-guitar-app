@@ -76,7 +76,18 @@
       </div>
       <!--.row-->
 
-      <div class="row mt-5"></div>
+      <div class="row mt-5">
+        <div class="col-md-6 text-center text-md-start pt-5">
+          <h1 class="display-2 fw-bold">Modelo {{ guitarra.nombre }}</h1>
+          <p class="mt-5 fs-5 text-white">{{ guitarra.descripcion }}</p>
+          <p class="text-primary fs-1 fw-black">{{ guitarra.precio }}</p>
+          <button 
+            type="button" 
+            class="btn fs-4 bg-primary text-white py-2 px-5"
+            @click="$emmit('agregar-carrito', guitarra)"
+          >Agregar al carrito</button>
+        </div>
+      </div>
     </div>
 
     <img
@@ -93,9 +104,13 @@
       type: Array,
       required: true,
     },
+    guitarra: {
+      type: Object,
+      required: true,
+    }
   });
 
-  defineEmits(['decrementar-cantidad', 'incrementar-cantidad'])
+  defineEmits(['decrementar-cantidad', 'incrementar-cantidad', 'agregar-carrito'])
 
 </script>
 
