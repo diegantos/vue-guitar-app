@@ -41,11 +41,11 @@
                           :alt="'imagen guitarra' + producto.nombre"
                         />
                       </td>
-                      <td>SRV</td>
-                      <td class="fw-bold">$299</td>
+                      <td>{{ producto.nombre }}</td>
+                      <td class="fw-bold">{{ producto.precio }}</td>
                       <td class="flex align-items-start gap-4">
                         <button type="button" class="btn btn-dark">-</button>
-                        1
+                          {{ producto.cantidad }}
                         <button type="button" class="btn btn-dark">+</button>
                       </td>
                       <td>
