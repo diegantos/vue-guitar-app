@@ -37,8 +37,8 @@
                       <td>
                         <img
                           class="img-fluid"
-                          src="/img/guitarra_02.jpg"
-                          alt="imagen guitarra"
+                          :src="'/img/' + producto.imagen + '.jpg'"
+                          :alt="'imagen guitarra' + producto.nombre"
                         />
                       </td>
                       <td>SRV</td>
